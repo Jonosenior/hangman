@@ -18,3 +18,10 @@ puts "
 
 "
 end
+
+def display_final_gallows
+  final_gallows_array = ["   ________","  |       |","  |       0\n","  |      /|\\ ","  |      / \\","  |         ","__|__"]
+  final_gallows_array.each do |element|
+    puts "                                #{element}"
+  end
+end

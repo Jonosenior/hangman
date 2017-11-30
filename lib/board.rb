@@ -54,14 +54,7 @@ class Board
   end
 
   def display_already_guessed
-    puts "Already guessed: #{@already_guessed.join(", ")}\n\n" unless @already_guessed.length < 1
-  end
-
-  def display_final_gallows
-    final_gallows_array = ["   ________","  |       |","  |       0\n","  |      /|\\ ","  |      / \\","  |         ","__|__"]
-    final_gallows_array.each do |element|
-      puts "                                #{element}"
-    end
+    puts "Incorrect Guesses: #{@already_guessed.join(", ")}\n\n" unless @already_guessed.length < 1
   end
 
 end

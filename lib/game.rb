@@ -1,3 +1,4 @@
+require 'yaml'
 class Game
 
   def initialize
@@ -17,10 +18,12 @@ class Game
   end
 
   def start
-    introduce_game
     while @incorrect_guesses_made < @incorrect_guesses_allowed
       new_turn
-      if !(is_guess_valid?)
+      if @guess.to_i == 1
+        save_game
+        exit
+      elsif !(is_guess_valid?)
         puts "Ugh - make a real guess."
         redo
       elsif is_guess_repeated?
@@ -38,6 +41,13 @@ class Game
     lose
   end
 
+  def save_game
+    board_and_game = [@board, self]
+    output = File.new("save_file.yml", "w")
+    output.puts YAML.dump(board_and_game)
+    output.close
+  end
+
   def is_guess_repeated?
     @board.already_guessed.include?(@guess) || @board.gapped_solution.include?(@guess)
   end
@@ -45,11 +55,26 @@ class Game
   def new_turn
     puts "\n\nGUESS #{@total_guesses_made + 1}\n\n"
     @board.user_display
+    #ask_user_if_wants_to_save
     ask_user_input
   end
 
+  # def ask_user_if_wants_to_save
+  #   puts "Would you like to save game and quit? (y/n)"
+  #   ans = gets.chomp
+  #   if ans == "y"
+  #     save_game
+  #     exit
+  #   elsif ans == "n"
+  #     ask_user_input
+  #   else
+  #     puts "Choose y or n!"
+  #     ask_user_if_wants_to_save
+  #   end
+  # end
+
   def lose
-    @board.display_final_gallows
+    display_final_gallows
     puts "\n\n                                YOU LOSE\n\n"
     puts "The solution was #{@solution} (obviously).\n\n"
     play_again
@@ -103,16 +128,8 @@ class Game
     #puts "You have #{@incorrect_guesses_remaining} incorrect guesses left..."
   end
 
-  def introduce_game
-    write_title
-    @board.display_final_gallows
-    puts "\n\n\nWelcome to Hangman.\n"
-    puts "The computer chooses a random word from the dictionary."
-    puts "It's your job to guess it.\n\n"
-  end
-
   def ask_user_input
-    puts "Please choose a letter."
+    puts "Please choose a letter, or type 1 to save and quit."
     @guess = gets.chomp
   end
 
