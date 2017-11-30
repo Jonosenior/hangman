@@ -7,7 +7,7 @@ Skills practiced:
  - String manipulation.
  - Object-Oriented Programming to create a working game.
 
-![Screenshot](hangman_cropped.png)
+![Hangman_screenshot](hangman_cropped.png?raw=true)
 
 It's a project from [The Odin Project](https://www.theodinproject.com/courses/ruby-programming/lessons/advanced-building-blocks).
 
