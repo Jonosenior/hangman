@@ -1,8 +1,10 @@
 require 'yaml'
+#require '5desk.txt'
+
 class Game
 
   def initialize
-    @dictionary = File.readlines('5desk.txt').map {|word| word.chomp}
+    @dictionary = File.readlines('lib/5desk.txt').map {|word| word.chomp}
     @possible_answers = @dictionary.select do |word|
       (word.length > 4) && (word.length < 13)
     end
