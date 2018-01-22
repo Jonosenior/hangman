@@ -1,0 +1,10 @@
+
+<% @dictionary = File.readlines('lib/5desk.txt').map {|word| word.chomp} %>
+
+<% @possible_answers = @dictionary.select { |word| (word.length > 4) && (word.length < 13) } %>
+
+<%= @solution = @possible_answers.sample.downcase %>
+
+
+
+<!-- <h5><%= @solution %></h5> -->
