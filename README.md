@@ -1,6 +1,6 @@
 # Hangman project
 
-This is player vs computer game of [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) for the command line. The computer chooses a random word of between 5 and 12 letters from the dictionary, which the player has 12 turns to guess.
+This is player vs computer game of [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) for the command line. The computer chooses a random word of between 5 and 12 letters from the dictionary, which the player has 7 turns to guess.
 
 Skills practiced:
  - File serialization using YAML to save and load game progress.
