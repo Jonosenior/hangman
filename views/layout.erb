@@ -1,10 +1,56 @@
 <html>
   <head>
     <style>
+
+      #content-wrapper{
+        margin: auto;
+        width: 800px;
+        border: 3px solid black;
+      }
+
+      #content{
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      #gapped_solution{
+        font-size: 200%
+      }
+
     </style>
   </head>
   <body>
-    <h1>Hangman</h1>
-    <%= yield %>
+    <div id="content-wrapper">
+      <div id="content">
+        <h1>Hangman</h1>
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
+
+
+<!--  <html>
+  <head>
+    <style>
+      #main-wrapper {
+        margin: auto;
+        width: 600px;
+        /*border: 3px solid grey;*/
+        padding: 10px;
+      }
+
+      #content {
+        font-family: Verdana, Geneva, sans-serif;
+        text-align: center;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-wrapper">
+      <%= yield %>
+    </div>
+  </body>
+</html>
+-->
