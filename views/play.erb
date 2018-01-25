@@ -1,7 +1,8 @@
 <h3 id="gapped_solution"><%= @gapped_solution.join(" ") %></h3>
 
-<h3> Incorrect guesses: <%= @incorrect_guesses.join(" ") %> </h3>
-<img src="public/hangman_6.png">
+<h3> Wrong: <%= @incorrect_guesses.join(" ") unless @incorrect_guesses.empty? %> </h3>
+
+<img src=<%= "hangman_#{@guesses_remaining}.png" %> alt="hanged man" width:"370" height:"390">
 <h3> <%= @warning_message if @warning_message %> </h3>
 <h3> <%= @guesses_remaining %> guesses remaining </h3>
 

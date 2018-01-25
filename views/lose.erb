@@ -1,5 +1,7 @@
 <p> What have you done? </p>
-<%= @solution.upcase %>
+<%= @solution.join("").upcase %>
+
+<img src="hangman_0.png" alt="hanged man">
 
 <form method="post" action="/">
   <input type='submit' value='New Game'>
