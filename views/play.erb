@@ -1,10 +1,12 @@
 <h3 id="gapped_solution"><%= @gapped_solution.join(" ") %></h3>
 
-<h3> Wrong: <%= @incorrect_guesses.join(" ") unless @incorrect_guesses.empty? %> </h3>
+<% if !@incorrect_guesses.empty? %>
+<h3> Wrong: <%= @incorrect_guesses.join(" ")  %> </h3>
+<% end %>
 
-<img src=<%= "hangman_#{@guesses_remaining}.png" %> alt="hanged man" width:"370" height:"390">
+<img src=<%= "hangman_#{@guesses_remaining}.png" %> alt="Hanging Joan" class="picture">
 <h3> <%= @warning_message if @warning_message %> </h3>
-<h3> <%= @guesses_remaining %> guesses remaining </h3>
+<h6> <%= @guesses_remaining %> guesses remaining </h6>
 
 <form method="post">
   <input type='text' name='guess' maxlength="1" pattern="[a-z]" required>

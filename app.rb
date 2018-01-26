@@ -34,7 +34,8 @@ post "/play" do
 end
 
 get '/win' do
-  redirect '/play' unless session[:gapped_solution] == session[:solution]
+  # redirect '/play' unless session[:gapped_solution] == session[:solution]
+  @solution = session[:solution]
   erb :win
 end
 
