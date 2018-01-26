@@ -5,6 +5,7 @@ This is player vs computer game of [Hangman](https://en.wikipedia.org/wiki/Hangm
 The project began life as a pure Ruby program to play in Terminal, and then a followup project used Sinatra to create a webapp, which you can play [here](https://blooming-coast-46970.herokuapp.com/).
 
 Skills practiced:
+
 Web app:
  - Creating a dynamic web app with Sinatra.
  - Using sessions to persist data across http requests.
