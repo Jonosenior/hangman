@@ -1,9 +1,16 @@
-# Hangman project
+# Hangman
 
-This is player vs computer game of [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) for  the browser and Terminal. It chooses a random word of between 5 and 12 letters from the dictionary, which the player has 6 turns to guess. It began life as a pure Ruby program to play in Terminal, and then a followup project used Sinatra to create a webapp, which you can play [here](https://blooming-coast-46970.herokuapp.com/).
+This is player vs computer game of [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) for the browser and Terminal. It chooses a random word of between 5 and 12 letters from the dictionary, which the player has 6 turns to guess.
+
+The project began life as a pure Ruby program to play in Terminal, and then a followup project used Sinatra to create a webapp, which you can play [here](https://blooming-coast-46970.herokuapp.com/).
 
 Skills practiced:
- - Routing with Sinatra
+Web app:
+ - Creating a dynamic web app with Sinatra.
+ - Using sessions to persist data across http requests.
+ - Using route handlers to respond to POST and GET requests.
+
+ Terminal:
  - File serialization using YAML to save and load game progress.
  - String manipulation.
  - Object-Oriented Programming to create a working game.
@@ -13,6 +20,7 @@ Skills practiced:
 
 It's a project from [The Odin Project](https://www.theodinproject.com/courses/ruby-programming/lessons/advanced-building-blocks).
 
+I developed most of the web app together with fellow Odinite IvyMic.
 
 ## Installation
 
@@ -25,7 +33,9 @@ $ ruby hangman.rb
 
 ## Post-project thoughts
 
-The game itself was relatively straightforward to build, and I finished it in an afternoon.
+The process of learning a framework like Sinatra is fundamentally different from learning a language like Ruby, because you're learning conventions rather than fundamentals. For example, I had problems when adding my pictures to the HTML, because my relative filepath - src="../public/image.jpg" - wasn't working. It took an answer from the Odin Project Gitter to teach me that Sinatra automatically looks for static content in a folder named public/, so my filepath was messing it up.
+
+The terminal game itself was relatively straightforward to build, and I finished it in an afternoon.
 
 Developing the save/load functions was harder, and the challenge pushed me to learn more about YAML and data serialization.
 
