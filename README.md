@@ -1,12 +1,14 @@
 # Hangman project
 
-This is player vs computer game of [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) for the command line. The computer chooses a random word of between 5 and 12 letters from the dictionary, which the player has 7 turns to guess.
+This is player vs computer game of [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) for  the browser and Terminal. It chooses a random word of between 5 and 12 letters from the dictionary, which the player has 6 turns to guess. It began life as a pure Ruby program to play in Terminal, and then a followup project used Sinatra to create a webapp, which you can play [here](https://blooming-coast-46970.herokuapp.com/).
 
 Skills practiced:
+ - Routing with Sinatra
  - File serialization using YAML to save and load game progress.
  - String manipulation.
  - Object-Oriented Programming to create a working game.
 
+![Screenshot](public/screenshot.png)
 ![Screenshot](public/hangman_cropped.png)
 
 It's a project from [The Odin Project](https://www.theodinproject.com/courses/ruby-programming/lessons/advanced-building-blocks).

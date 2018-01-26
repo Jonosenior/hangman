@@ -9,6 +9,6 @@
 <h6> <%= @guesses_remaining %> guesses remaining </h6>
 
 <form method="post">
-  <input type='text' name='guess' maxlength="1" pattern="[a-z]" required autofocus>
+  <input type='text' name='guess' maxlength="1" pattern="[a-zA-z]" required autofocus>
   <input type='submit' value='Guess!'>
 </form>
